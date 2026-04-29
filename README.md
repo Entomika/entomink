@@ -2,7 +2,7 @@
 
 # 🐞 **Entom**<span style="color:#0f7a5a">**Ink**</span>
 
-<img src="https://entomika.github.io/entomika/images/portfolio-09.jpg" alt="Insect art header" height="250" width="1000">
+<img src="https://entomika.github.io/entomink/images/portfolio-09.jpg" alt="Insect art header" height="250" width="1000">
 
 **Insect world meets scientific artistry**
 
@@ -41,7 +41,7 @@ A visual journey where **insects' uniqueness becomes imagery**. Here, we play wi
 - ✉️ mikaelison.silva@gmail.com 
 - 🌐 London, Ontario  
 - ⏱️ 1-3 week turnaround
-- 💰 **Budget-friendly** custom illustrations (*Tailored to your project & needs*
+- 💰 **Budget-friendly** custom illustrations (*Tailored to your project & needs*)
 
 
 <div align="center">
