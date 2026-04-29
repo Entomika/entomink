@@ -33,7 +33,6 @@ body{
   overflow:hidden;
   backdrop-filter:blur(16px);
 }
-
 .hero{padding:42px 28px 24px;text-align:center;border-bottom:1px solid var(--line)}
 h1{
   margin:0;
@@ -134,7 +133,6 @@ h1{
   font-size:.95rem;
   background:rgba(0,0,0,.28);
 }
-
 .carousel-btn{
   width:44px;
   height:44px;
@@ -145,7 +143,6 @@ h1{
   font-size:1.8rem;
   cursor:pointer;
 }
-
 .buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
 .btn{
   display:inline-flex;
