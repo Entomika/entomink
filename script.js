@@ -31,15 +31,15 @@ function closeModal() {
 }
 
 function startAutoScroll() {
+  clearInterval(timer);
   timer = setInterval(() => goToSlide(index + 1), 3500);
 }
 
 function resetAutoScroll() {
-  clearInterval(timer);
   startAutoScroll();
 }
 
-slides.forEach((slide, i) => {
+slides.forEach((slide) => {
   slide.addEventListener('click', () => {
     if (modal.classList.contains('open')) closeModal();
     else openModal(slide);
