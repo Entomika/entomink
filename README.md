@@ -36,12 +36,12 @@ A visual journey where **insects' uniqueness becomes imagery**. Here, we play wi
 ## 🚀 **Live Demo**
 [👁️ **View the portfolio**](https://entomika.github.io/entomika/)
 
-## 📞 **Ready to collaborate?**
+## 📞 **Questions or Commissions?**
 
 - ✉️ mikaelison.silva@gmail.com 
 - 🌐 London, Ontario  
 - ⏱️ 1-3 week turnaround
-- 💰 **Budget-friendly** custom illustrations (*Tailored to your project & needs*)
+- 💰 **Budget-friendly** custom illustrations and apparel
 
 
 <div align="center">
