@@ -10,17 +10,26 @@ const closeBtn = document.querySelector('.modal-close');
 let index = 0;
 let timer;
 
+/* ---------- SLIDE NAVIGATION ---------- */
 function goToSlide(i) {
   index = (i + slides.length) % slides.length;
-  slides[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+
+  slides[index].scrollIntoView({
+    behavior: 'smooth',
+    inline: 'center',
+    block: 'nearest'
+  });
 }
 
+/* ---------- MODAL ---------- */
 function openModal(slide) {
   const img = slide.querySelector('img');
   const caption = slide.querySelector('figcaption').textContent;
+
   modalImg.src = img.src;
   modalImg.alt = img.alt;
   modalCaption.textContent = caption;
+
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
 }
@@ -30,25 +39,41 @@ function closeModal() {
   modal.setAttribute('aria-hidden', 'true');
 }
 
+/* ---------- AUTOPLAY ---------- */
 function startAutoScroll() {
   clearInterval(timer);
-  timer = setInterval(() => goToSlide(index + 1), 3500);
+
+  timer = setInterval(() => {
+    goToSlide(index + 1);
+  }, 3500);
 }
 
 function resetAutoScroll() {
   startAutoScroll();
 }
 
+/* ---------- EVENTS ---------- */
 slides.forEach((slide) => {
   slide.addEventListener('click', () => {
     if (modal.classList.contains('open')) closeModal();
     else openModal(slide);
   });
+
   slide.addEventListener('mouseenter', resetAutoScroll);
 });
 
-prevBtn?.addEventListener('click', () => { goToSlide(index - 1); resetAutoScroll(); });
-nextBtn?.addEventListener('click', () => { goToSlide(index + 1); resetAutoScroll(); });
+/* buttons */
+prevBtn?.addEventListener('click', () => {
+  goToSlide(index - 1);
+  resetAutoScroll();
+});
+
+nextBtn?.addEventListener('click', () => {
+  goToSlide(index + 1);
+  resetAutoScroll();
+});
+
+/* modal */
 closeBtn.addEventListener('click', closeModal);
 
 modal.addEventListener('click', (e) => {
@@ -59,9 +84,26 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
 });
 
+/* ---------- FIXED INDEX TRACKING (KEY PART) ---------- */
 carousel.addEventListener('scroll', () => {
-  const slideWidth = slides[0].getBoundingClientRect().width + 14;
-  index = Math.round(carousel.scrollLeft / slideWidth);
+  let closestIndex = 0;
+  let closestDistance = Infinity;
+
+  slides.forEach((slide, i) => {
+    const rect = slide.getBoundingClientRect();
+    const center = rect.left + rect.width / 2;
+    const viewportCenter = window.innerWidth / 2;
+
+    const distance = Math.abs(center - viewportCenter);
+
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = i;
+    }
+  });
+
+  index = closestIndex;
 });
 
+/* ---------- START ---------- */
 startAutoScroll();
