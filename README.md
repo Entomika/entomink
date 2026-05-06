@@ -2,7 +2,7 @@
 
 # 🐞 **Entom**<span style="color:#0f7a5a">**Ink**</span>
 
-<img src="https://entomika.github.io/entomink/images/portfolio-09.jpg" alt="Insect art header" height="250" width="1000">
+<img src="https://entomika.github.io/entomink/images/portfolio-1.jpg" alt="Insect art header" height="250" width="1000">
 
 **Insect world meets scientific artistry**
 
